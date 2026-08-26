@@ -1,17 +1,47 @@
 aid: ohalo-genetics
 name: Ohalo Genetics
-description: 'Ohalo Genetics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Ohalo Genetics is an American agricultural biotechnology company founded in 2019 and led by CEO
+  David Friedberg, developing plant-breeding platforms and proprietary crop varieties. Its flagship
+  Boosted Breeding technology — marketed as "2x + 2x = 4x" — alters the reproductive circuitry of
+  parent plants so each parent passes its entire genome to the next generation rather than a random
+  half, producing polyploid offspring that carry the full genetic contribution of both parents and,
+  in early field trials, substantially higher yields. Ohalo pairs this with an Agile Breeding service
+  and a True Seed program that ships uniform, disease-free seedlings directly to growers, with active
+  programs in potato, almond (the FruitionOne self-fertile Nonpareil variety), strawberry and corn,
+  delivered through partnerships such as the Allied Potato partnership and a strawberry consortium.
+  The company sells plant genetics and breeding services to agricultural partners; it is not a
+  software vendor and publishes no public developer program, API, SDK or machine-readable contract.
 url: https://raw.githubusercontent.com/api-evangelist/ohalo-genetics/refs/heads/main/apis.yml
+x-disambiguation:
+- name: Ohalo Limited (Data X-Ray)
+  url: https://www.ohalo.co/
+  relationship: unrelated-name-collision
+  note: 'London-based data discovery and security company behind the Data X-Ray data-governance
+    product, with a public GitHub organization at https://github.com/Ohalo-Ltd that includes a
+    "security-first React starter for applications built on the Data X-Ray public API". It is a
+    different company from Ohalo Genetics (ohalo.com, agricultural biotechnology, United States)
+    and shares nothing but the name — its Data X-Ray API must never be attributed to Ohalo
+    Genetics. The Ohalo Genetics GitHub organization is https://github.com/ohalogenetics, whose
+    two public repositories are both forks of third-party projects (karpathy/autoresearch and
+    onshape-to-robot) and contain no first-party API or contract.'
+image: https://cdn.prod.website-files.com/671a849e68709c39225eaca5/67472bba15de91cf033f3a59_Ohalo-Logo.svg
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
-specificationVersion: '0.20'
+x-tier: profile
+x-tier-reason: enrichment-pass
+specificationVersion: '0.23'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Agriculture
+- AgTech
+- Biotechnology
+- Genetics
+- Plant Breeding
+- Seeds
+- Food
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +49,45 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/ohalo-genetics-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.ohalo.com/
+- type: About
+  url: https://www.ohalo.com/about
+- type: Blog
+  url: https://www.ohalo.com/news
+- type: GitHubOrganization
+  url: https://github.com/ohalogenetics
+- type: LinkedIn
+  url: https://www.linkedin.com/company/ohalo-genetics
+- type: Careers
+  url: https://job-boards.greenhouse.io/ohalogenetics
+
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Ohalo Genetics sells plant genetics — Boosted Breeding services, True Seed seedlings and
+    proprietary potato, almond and strawberry varieties — and ohalo.com is a five-page Webflow
+    marketing site with no /docs, /api, /developer, /llms.txt or sitemap, no api/app/docs/developer
+    subdomain in DNS, and a 404 on every /.well-known/ path including a nonsense control path.
+  evidence:
+  - url: https://www.ohalo.com/
+    status: 200
+  - url: https://www.ohalo.com/docs
+    status: 404
+  - url: https://www.ohalo.com/openapi.json
+    status: 404
+  - url: https://www.ohalo.com/llms.txt
+    status: 404
+  - url: https://www.ohalo.com/.well-known/api-catalog
+    status: 404
+  - url: https://www.ohalo.com/.well-known/agent-card.json
+    status: 404
+  checked: '2026-08-26'

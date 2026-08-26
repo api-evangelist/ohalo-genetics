@@ -1,0 +1,49 @@
+generated: '2026-08-26'
+method: probed
+source: live probes of https://www.ohalo.com and https://ohalo.com
+note: >-
+  Every /.well-known/ path probed on both Ohalo Genetics hosts returned a real HTTP 404 — the
+  Webflow-hosted origin answers "Invalid .well-known request" with a 404 status, and a nonsense
+  control path returns the same 404, so this is a genuine absence and not a soft-200 catch-all.
+  Nothing was saved and NO WellKnown or SecurityTxt pointer is emitted: the company serves no
+  discovery surface. Recorded as data, because an honest absence is a measurement.
+hit_count: 0
+hosts:
+- host: https://www.ohalo.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/this-path-should-not-exist-ae-control
+    status: 404
+    note: soft_404_control — a nonsense path also 404s, confirming the origin is not a catch-all
+- host: https://ohalo.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /.well-known/this-path-should-not-exist-ae-control
+    status: 404
+    note: soft_404_control — a nonsense path also 404s, confirming the origin is not a catch-all
