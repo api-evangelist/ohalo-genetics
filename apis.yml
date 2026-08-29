@@ -25,6 +25,17 @@ x-disambiguation:
     Genetics. The Ohalo Genetics GitHub organization is https://github.com/ohalogenetics, whose
     two public repositories are both forks of third-party projects (karpathy/autoresearch and
     onshape-to-robot) and contain no first-party API or contract.'
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/671a849e68709c39225eaca5/67472bba15de91cf033f3a59_Ohalo-Logo.svg
 x-type: company
 x-source: harvest:secondary-market
