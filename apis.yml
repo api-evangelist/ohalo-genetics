@@ -36,6 +36,18 @@ deliveryModel:
   - none
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://cdn.prod.website-files.com/671a849e68709c39225eaca5/67472bba15de91cf033f3a59_Ohalo-Logo.svg
 x-type: company
 x-source: harvest:secondary-market
